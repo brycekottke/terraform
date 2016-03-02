@@ -1,0 +1,20 @@
+# Access / Secret Key
+variable "access_key" { 
+  description = "aws access key"
+  default = "KEY_HERE"
+}
+
+variable "secret_key" { 
+  description = "aws secret access key"
+  default = "SECRET_KEY_HERE"
+}
+
+variable "region"     { 
+  description = "aws region"
+  default     = "us-west-2" 
+}
+
+variable "pub_key"     { 
+  description = "public key for ssh authentication"
+  default     = "PUB_SSH_KEY_HERE" 
+}
