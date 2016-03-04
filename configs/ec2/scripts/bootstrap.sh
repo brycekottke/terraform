@@ -30,6 +30,11 @@ else
   exit 0
 fi
 
-echo ${var.pub_key} >> /home/datapipe/.ssh/authorized_keys
-echo ${var.pub_key} >> /tmp/test01.txt
+echo ${pub_key} >> /home/datapipe/.ssh/authorized_keys
+
+# add 'datapipe' user to sudoers
+touch /etc/sudoers.d/datapipe
+chmod 440 /etc/sudoers.d/datapipe
+
+printf "# User rules for datapipe\ndatapipe ALL=(ALL) NOPASSWD:ALL\n" > /etc/sudoers.d/datapipe
 
