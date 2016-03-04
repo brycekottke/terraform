@@ -1,0 +1,48 @@
+variable "access_key" { 
+  description = "aws access key"
+  default = "KEY_HERE"
+}
+
+variable "secret_key" { 
+  description = "aws secret access key"
+  default = "SECRET_HERE"
+}
+
+variable "region"     { 
+  description = "aws region"
+  default     = "us-west-2" 
+}
+
+variable "name" { 
+  default = "vpc-01"
+}
+
+variable "ec2_environment" {
+  default     = "dev"
+}
+
+variable "cidr" { 
+  default = "10.0.0.0/16"
+}
+
+variable "public_subnets" { 
+  default = "10.0.10.0/24" 
+}
+
+variable "private_subnets" { 
+  default = "10.0.20.0/24" 
+}
+
+variable "azs" {
+  default = "us-west-2a"
+}
+
+variable "enable_dns_hostnames" {
+  description = "should be true if you want to use private DNS within the VPC"
+  default = true
+}
+
+variable "enable_dns_support" {
+  description = "should be true if you want to use private DNS within the VPC"
+  default = true
+}

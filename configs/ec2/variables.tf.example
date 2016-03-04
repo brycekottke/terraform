@@ -6,7 +6,7 @@ variable "access_key" {
 
 variable "secret_key" { 
   description = "aws secret access key"
-  default = "SECRET_KEY_HERE"
+  default = "SECRET_HERE"
 }
 
 variable "region"     { 
@@ -14,7 +14,27 @@ variable "region"     {
   default     = "us-west-2" 
 }
 
+variable "ec2_name"     { 
+  description = "ec2 instance name tag"
+  default     = "dev-terraform-1" 
+}
+
+variable "ec2_environment"     { 
+  description = "ec2 instance environment tag"
+  default     = "dev" 
+}
+
+variable "ami_image"     { 
+  description = "ami image id"
+  default     = "ami-9abea4fb" 
+}
+
+variable "instance_type"     { 
+  description = "aws instance type"
+  default     = "t2.micro" 
+}
+
 variable "pub_key"     { 
   description = "public key for ssh authentication"
-  default     = "PUB_SSH_KEY_HERE" 
+  default     = "PUB_SSH_KEY_HERE"
 }
