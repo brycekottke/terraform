@@ -38,3 +38,6 @@ chmod 440 /etc/sudoers.d/datapipe
 
 printf "# User rules for datapipe\ndatapipe ALL=(ALL) NOPASSWD:ALL\n" > /etc/sudoers.d/datapipe
 
+# install docker
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker datapipe
